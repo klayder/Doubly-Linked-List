@@ -19,6 +19,7 @@ class LinkedList {
 		this._tail.next = TempTail;
 		this._tail = TempTail;
 		this.length++;
+		return this;
 	}
     
 	head(data) {
@@ -47,6 +48,7 @@ class LinkedList {
 		temp = temp.next;
 		i++;
 		}
+		return this;
 	}
     
 	isEmpty() {
@@ -61,6 +63,7 @@ class LinkedList {
 		this._tail.data = null;
 		this._head.data = null;
 		this.length = 0;
+		return this;
 	}
     
 	deleteAt(index) {
@@ -74,6 +77,7 @@ class LinkedList {
 		temp = temp.next;
 		i++;
 		}
+		return this;
 	}
     
 	reverse() {
@@ -97,7 +101,8 @@ class LinkedList {
 		temp=temp.next;
 		i++;
 		}
-		return -1;}
+		return -1;
+	}
 }
 
 module.exports = LinkedList;
